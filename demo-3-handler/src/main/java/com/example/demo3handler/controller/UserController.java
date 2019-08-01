@@ -11,7 +11,12 @@ public class UserController {
     }
 
     @RequestMapping("/index")
-    public String index(String username, String password) {
+    public String index() {
         return "/index";
+    }
+
+    @RequestMapping("/dashboard")
+    public String dashboard() {
+        return "/dashboard";
     }
 }
