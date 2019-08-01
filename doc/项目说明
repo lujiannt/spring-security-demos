@@ -1,0 +1,15 @@
+【注意】每个新版本都包含之前的版本
+demo1:
+    1.security入门，简单的登录（写死用户名密码权限，使用默认登录页）
+demo2:
+    1.自定义provider，从数据库拉去用户信息进行动态校验
+demo3:
+    1.自定义登录成功/失败处理器
+    2.自定义登录页面与流程
+    3.获得登录信息
+demo4:
+    1.自定义登出
+demo5:
+    1.简单权限实现
+        controller层 使用@PreAuthorize("hasPermission('/role2','USER')")
+        使用PermissionEvaluator校验权限
