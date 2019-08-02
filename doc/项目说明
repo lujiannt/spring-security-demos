@@ -12,4 +12,8 @@ demo4:
 demo5:
     1.简单权限实现
         controller层 使用@PreAuthorize("hasPermission('/role2','USER')")
-        使用PermissionEvaluator校验权限
+        使用PermissionEvaluator校验权限,这里是根据url校验的，也可以只用角色名来校验
+demo6:
+    1.controller层三种权限方式
+        hasPermission、hasRole、hasAuthority
+    2.service层接口权限 TODO...
