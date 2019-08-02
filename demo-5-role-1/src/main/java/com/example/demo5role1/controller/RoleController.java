@@ -15,7 +15,7 @@ public class RoleController {
      * @return
      */
     @RequestMapping("/role1")
-    @PreAuthorize("hasPermission('/role1','ADMIN')")
+    @PreAuthorize("hasPermission('/role1','ADMIN')") //使用权限注解标注请求的url和对应的角色
     public String role1() {
         return "/role/role1";
     }
@@ -32,12 +32,12 @@ public class RoleController {
     }
 
     /**
-     * 跳转到role3页面
+     * 跳转到自定义权限403页面
      *
      * @return
      */
-    @RequestMapping("/role3")
+    @RequestMapping("/forbidden")
     public String role3() {
-        return "/role/role3";
+        return "/role/forbidden";
     }
 }

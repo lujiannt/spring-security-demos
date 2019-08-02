@@ -54,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //登录成功/失败处理器
 //                .successHandler(myAuthSuccessHandler)
 //                .failureHandler(myAuthFailureHandler)
-                //登录成功/失败跳转url, 可以用于返回提示信息等
+                //登录成功/失败跳转url, 可以用于返回提示页面或提示信息等
                 .defaultSuccessUrl("/index")
                 .and()
                 //配置登出

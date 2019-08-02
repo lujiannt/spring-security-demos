@@ -13,17 +13,27 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * 自定义权限过滤器
+ */
 @Configuration
 public class MyPermissionEvaluator implements PermissionEvaluator {
     @Autowired
     private RoleService roleService;
 
-
+    /**
+     * 通过请求过来的url和数据库中的角色对应url来对应校验权限
+     *
+     * @param authentication
+     * @param targetUrl
+     * @param targetPermission
+     * @return
+     */
     @Override
     public boolean hasPermission(Authentication authentication, Object targetUrl, Object targetPermission) {
         System.out.println("checking is has permission......");
-        System.out.println("targetUrl is " + targetUrl);
-        System.out.println("targetPermission is " + targetPermission);
+        System.out.println("请求方法对应路径 : " + targetUrl);
+        System.out.println("请求方法对应角色 ： " + targetPermission);
         // 获得loadUserByUsername()方法的结果
         User user = (User) authentication.getPrincipal();
         // 获得loadUserByUsername()中注入的角色
@@ -48,8 +58,6 @@ public class MyPermissionEvaluator implements PermissionEvaluator {
         }
 
         return false;
-
-
     }
 
     @Override

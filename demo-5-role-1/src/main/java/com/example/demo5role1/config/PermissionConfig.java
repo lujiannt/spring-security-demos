@@ -6,7 +6,9 @@ import org.springframework.security.access.expression.method.MethodSecurityExpre
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration;
 
-
+/**
+ * 开启权限控制
+ */
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class PermissionConfig extends GlobalMethodSecurityConfiguration {
     @Autowired
