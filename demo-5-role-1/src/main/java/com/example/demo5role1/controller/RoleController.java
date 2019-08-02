@@ -37,7 +37,7 @@ public class RoleController {
      * @return
      */
     @RequestMapping("/forbidden")
-    public String role3() {
+    public String forbidden() {
         return "/role/forbidden";
     }
 }
